@@ -1,7 +1,14 @@
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
-    if ((mySprite.tileKindAt(TileDirection.Bottom, assets.tile`myTile0`) || (mySprite.tileKindAt(TileDirection.Left, assets.tile`myTile0`) || mySprite.tileKindAt(TileDirection.Right, assets.tile`myTile0`))) && !(ragdoll)) {
-        mySprite.vy += -200
+    if ((mySprite.tileKindAt(TileDirection.Bottom, assets.tile`myTile0`) || (mySprite.tileKindAt(TileDirection.Left, assets.tile`myTile0`) || mySprite.tileKindAt(TileDirection.Right, assets.tile`myTile0`)) && !(walljumpOnCooldown)) && !(ragdoll)) {
+        mySprite.vy = -200
+        walljumpOnCooldown = true
+        timer.after(500, function () {
+            walljumpOnCooldown = false
+        })
     }
+})
+info.onCountdownEnd(function () {
+    ragdoll = false
 })
 function setup () {
     ragdoll = false
@@ -151,17 +158,37 @@ function setup () {
     controller.moveSprite(mySprite, 100, 0)
 }
 let ragdoll = false
+let walljumpOnCooldown = false
 let mySprite: Sprite = null
 setup()
 forever(function () {
     mySprite.vy += 5
     if (mySprite.tileKindAt(TileDirection.Center, assets.tile`myTile`)) {
         ragdoll = true
-        mySprite.vx = 50
+        mySprite.vx = 100
+        mySprite.vy = 0
+        info.startCountdown(3)
     } else if (mySprite.tileKindAt(TileDirection.Center, assets.tile`myTile1`)) {
         ragdoll = true
+        mySprite.vx = -100
+        mySprite.vy = 0
+        info.startCountdown(3)
+    } else if (mySprite.tileKindAt(TileDirection.Bottom, assets.tile`myTile`)) {
+        ragdoll = true
+        mySprite.vx = 50
+        info.startCountdown(3)
+    } else if (mySprite.tileKindAt(TileDirection.Bottom, assets.tile`myTile1`)) {
+        ragdoll = true
         mySprite.vx = -50
-    } else {
+        info.startCountdown(3)
+    }
+    if (mySprite.tileKindAt(TileDirection.Center, assets.tile`myTile3`)) {
+        info.stopCountdown()
         ragdoll = false
+    }
+    if (ragdoll == false) {
+        controller.moveSprite(mySprite, 100, 0)
+    } else {
+        controller.moveSprite(mySprite, 0, 0)
     }
 })
