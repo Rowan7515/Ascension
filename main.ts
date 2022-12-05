@@ -1,6 +1,6 @@
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
-    if ((mySprite.tileKindAt(TileDirection.Bottom, assets.tile`myTile0`) || (mySprite.tileKindAt(TileDirection.Left, assets.tile`myTile0`) || mySprite.tileKindAt(TileDirection.Right, assets.tile`myTile0`)) && !(walljumpOnCooldown)) && !(ragdoll)) {
-        mySprite.vy = -200
+    if ((Character.tileKindAt(TileDirection.Bottom, assets.tile`myTile0`) || (Character.tileKindAt(TileDirection.Left, assets.tile`myTile0`) || Character.tileKindAt(TileDirection.Right, assets.tile`myTile0`)) && !(walljumpOnCooldown)) && !(ragdoll)) {
+        Character.vy = -200
         walljumpOnCooldown = true
         timer.after(500, function () {
             walljumpOnCooldown = false
@@ -135,7 +135,7 @@ function setup () {
         9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
         `)
     tiles.setCurrentTilemap(tilemap`level1`)
-    mySprite = sprites.create(img`
+    Character = sprites.create(img`
         . . . . . . . . . . . 6 6 6 6 6 
         . . . . . . . . . 6 6 7 7 7 7 8 
         . . . . . . 8 8 8 7 7 8 8 6 8 8 
@@ -153,42 +153,42 @@ function setup () {
         . . . . . . . . c e 2 2 2 2 c . 
         . . . . . . . . . c c c c c . . 
         `, SpriteKind.Player)
-    tiles.placeOnRandomTile(mySprite, assets.tile`myTile3`)
-    scene.cameraFollowSprite(mySprite)
-    controller.moveSprite(mySprite, 100, 0)
+    tiles.placeOnRandomTile(Character, assets.tile`myTile3`)
+    scene.cameraFollowSprite(Character)
+    controller.moveSprite(Character, 100, 0)
 }
 let ragdoll = false
 let walljumpOnCooldown = false
-let mySprite: Sprite = null
+let Character: Sprite = null
 setup()
 forever(function () {
-    mySprite.vy += 5
-    if (mySprite.tileKindAt(TileDirection.Center, assets.tile`myTile`)) {
+    Character.vy += 8
+    if (Character.tileKindAt(TileDirection.Center, assets.tile`myTile`)) {
         ragdoll = true
-        mySprite.vx = 100
-        mySprite.vy = 0
+        Character.vx = 100
+        Character.vy = 0
         info.startCountdown(3)
-    } else if (mySprite.tileKindAt(TileDirection.Center, assets.tile`myTile1`)) {
+    } else if (Character.tileKindAt(TileDirection.Center, assets.tile`myTile1`)) {
         ragdoll = true
-        mySprite.vx = -100
-        mySprite.vy = 0
+        Character.vx = -100
+        Character.vy = 0
         info.startCountdown(3)
-    } else if (mySprite.tileKindAt(TileDirection.Bottom, assets.tile`myTile`)) {
+    } else if (Character.tileKindAt(TileDirection.Bottom, assets.tile`myTile`)) {
         ragdoll = true
-        mySprite.vx = 50
+        Character.vx = 50
         info.startCountdown(3)
-    } else if (mySprite.tileKindAt(TileDirection.Bottom, assets.tile`myTile1`)) {
+    } else if (Character.tileKindAt(TileDirection.Bottom, assets.tile`myTile1`)) {
         ragdoll = true
-        mySprite.vx = -50
+        Character.vx = -50
         info.startCountdown(3)
     }
-    if (mySprite.tileKindAt(TileDirection.Center, assets.tile`myTile3`)) {
+    if (Character.tileKindAt(TileDirection.Center, assets.tile`myTile3`)) {
         info.stopCountdown()
         ragdoll = false
     }
     if (ragdoll == false) {
-        controller.moveSprite(mySprite, 100, 0)
+        controller.moveSprite(Character, 100, 0)
     } else {
-        controller.moveSprite(mySprite, 0, 0)
+        controller.moveSprite(Character, 0, 0)
     }
 })
