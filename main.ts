@@ -173,11 +173,11 @@ forever(function () {
         Character.vx = -100
         Character.vy = 0
         info.startCountdown(3)
-    } else if (Character.tileKindAt(TileDirection.Bottom, assets.tile`myTile`)) {
+    } else if (Character.vy < 0 && Character.tileKindAt(TileDirection.Bottom, assets.tile`myTile`)) {
         ragdoll = true
         Character.vx = 50
         info.startCountdown(3)
-    } else if (Character.tileKindAt(TileDirection.Bottom, assets.tile`myTile1`)) {
+    } else if (Character.vy < 0 && Character.tileKindAt(TileDirection.Bottom, assets.tile`myTile1`)) {
         ragdoll = true
         Character.vx = -50
         info.startCountdown(3)
@@ -190,5 +190,12 @@ forever(function () {
         controller.moveSprite(Character, 100, 0)
     } else {
         controller.moveSprite(Character, 0, 0)
+    }
+    if (Character.vy == 0 && ragdoll == true) {
+        if (Character.vx > 0) {
+            Character.vx += -10
+        } else {
+            Character.vx += 10
+        }
     }
 })
