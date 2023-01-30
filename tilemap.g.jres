@@ -4,11 +4,35 @@
         "mimeType": "image/x-mkcd-f4",
         "tilemapTile": true
     },
-    "tile1": {
-        "data": "hwQQABAAAAD///////////D/////////AP////////8A8P///////wAA////////AADw//////8AAAD//////wAAAPD/////AAAAAP////8AAAAA8P///wAAAAAA////AAAAAADw//8AAAAAAAD//wAAAAAAAPD/AAAAAAAAAP8AAAAAAAAA8A==",
+    "tile7": {
+        "data": "hwQQABAAAAD///////////////////8P/////////wD///////8PAP///////wAA//////8PAAD//////wAAAP////8PAAAA/////wAAAAD///8PAAAAAP///wAAAAAA//8PAAAAAAD//wAAAAAAAP8PAAAAAAAA/wAAAAAAAAAPAAAAAAAAAA==",
         "mimeType": "image/x-mkcd-f4",
         "tilemapTile": true,
-        "displayName": "myTile"
+        "displayName": "RightInvertedBirck"
+    },
+    "tile6": {
+        "data": "hwQQABAAAAAPAAAAAAAAAP8AAAAAAAAA/w8AAAAAAAD//wAAAAAAAP//DwAAAAAA////AAAAAAD///8PAAAAAP////8AAAAA/////w8AAAD//////wAAAP//////DwAA////////AAD///////8PAP////////8A/////////w///////////w==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true,
+        "displayName": "LeftInvertedBrick"
+    },
+    "tile3": {
+        "data": "hwQQABAAAAAAAAAAAAAA8AAAAAAAAAD/AAAAAAAA8P8AAAAAAAD//wAAAAAA8P//AAAAAAD///8AAAAA8P///wAAAAD/////AAAA8P////8AAAD//////wAA8P//////AAD///////8A8P///////wD/////////8P///////////////////w==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true,
+        "displayName": "LeftBrick"
+    },
+    "tile4": {
+        "data": "hwQQABAAAAAAAAAAAAAAALu7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7sAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true,
+        "displayName": "myTile2"
+    },
+    "tile5": {
+        "data": "hwQQABAAAAAAAMzMzMzMzAAAzMzMzMzMAADMzMzMzMwAAMzMzMzMzAAAzMzMzMzMAADMzMzMzMwAAMzMzMzMzAAAzMzMzMzMAADMzMzMzMwAAMzMzMzMzAAAzMzMzMzMAADMzMzMzMwAAMzMzMzMzAAAzMzMzMzMAADMzMzMzMwAAMzMzMzMzA==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true,
+        "displayName": "myTile3"
     },
     "tile2": {
         "data": "hwQQABAAAAD//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////w==",
@@ -16,35 +40,11 @@
         "tilemapTile": true,
         "displayName": "myTile0"
     },
-    "tile3": {
-        "data": "hwQQABAAAAAAAAAAAAAA8AAAAAAAAAD/AAAAAAAA8P8AAAAAAAD//wAAAAAA8P//AAAAAAD///8AAAAA8P///wAAAAD/////AAAA8P////8AAAD//////wAA8P//////AAD///////8A8P///////wD/////////8P///////////////////w==",
+    "tile1": {
+        "data": "hwQQABAAAAD///////////D/////////AP////////8A8P///////wAA////////AADw//////8AAAD//////wAAAPD/////AAAAAP////8AAAAA8P///wAAAAAA////AAAAAADw//8AAAAAAAD//wAAAAAAAPD/AAAAAAAAAP8AAAAAAAAA8A==",
         "mimeType": "image/x-mkcd-f4",
         "tilemapTile": true,
-        "displayName": "myTile1"
-    },
-    "tile4": {
-        "data": "hwQQABAAAAAAAAAAAAAAAIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIgAAAAAAAAAAA==",
-        "mimeType": "image/x-mkcd-f4",
-        "tilemapTile": true,
-        "displayName": "myTile2"
-    },
-    "tile5": {
-        "data": "hwQQABAAAAAAAIiIiIiIiAAAiIiIiIiIAACIiIiIiIgAAIiIiIiIiAAAiIiIiIiIAACIiIiIiIgAAIiIiIiIiAAAiIiIiIiIAACIiIiIiIgAAIiIiIiIiAAAiIiIiIiIAACIiIiIiIgAAIiIiIiIiAAAiIiIiIiIAACIiIiIiIgAAIiIiIiIiA==",
-        "mimeType": "image/x-mkcd-f4",
-        "tilemapTile": true,
-        "displayName": "myTile3"
-    },
-    "tile6": {
-        "data": "hwQQABAAAAAPAAAAAAAAAP8AAAAAAAAA/w8AAAAAAAD//wAAAAAAAP//DwAAAAAA////AAAAAAD///8PAAAAAP////8AAAAA/////w8AAAD//////wAAAP//////DwAA////////AAD///////8PAP////////8A/////////w///////////w==",
-        "mimeType": "image/x-mkcd-f4",
-        "tilemapTile": true,
-        "displayName": "myTile4"
-    },
-    "tile7": {
-        "data": "hwQQABAAAAD///////////////////8P/////////wD///////8PAP///////wAA//////8PAAD//////wAAAP////8PAAAA/////wAAAAD///8PAAAAAP///wAAAAAA//8PAAAAAAD//wAAAAAAAP8PAAAAAAAA/wAAAAAAAAAPAAAAAAAAAA==",
-        "mimeType": "image/x-mkcd-f4",
-        "tilemapTile": true,
-        "displayName": "myTile5"
+        "displayName": "myTile"
     },
     "level1": {
         "id": "level1",
@@ -59,7 +59,7 @@
             "myTiles.tile5",
             "myTiles.tile6"
         ],
-        "displayName": "level1"
+        "displayName": "HellRegion"
     },
     "*": {
         "mimeType": "image/x-mkcd-f4",

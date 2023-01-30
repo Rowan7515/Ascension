@@ -6,7 +6,9 @@
         "controller": "*",
         "arcade-text": "github:microsoft/arcade-text#v1.3.0",
         "Timers": "github:microsoft/arcade-timers#v1.1.0",
-        "Color Fading": "github:jwunderl/pxt-color#v0.2.2"
+        "Color Fading": "github:jwunderl/pxt-color#v0.2.2",
+        "sprite-scaling": "*",
+        "pxt-raycasting": "github:aqeeaqee/pxt-raycasting#v0.3.15"
     },
     "files": [
         "main.blocks",
@@ -23,11 +25,29 @@
         "test.ts"
     ],
     "targetVersions": {
-        "target": "1.11.37",
+        "target": "1.12.17",
         "targetId": "arcade"
     },
     "supportedTargets": [
         "arcade"
     ],
-    "preferredEditor": "blocksprj"
+    "preferredEditor": "blocksprj",
+    "palette": [
+        "#000000",
+        "#670404",
+        "#891E02",
+        "#CA2D04",
+        "#EC9500",
+        "#5B0505",
+        "#760000",
+        "#B12500",
+        "#B53E02",
+        "#938585",
+        "#60328E",
+        "#50258E",
+        "#2D1850",
+        "#544461",
+        "#27212F",
+        "#000000"
+    ]
 }
